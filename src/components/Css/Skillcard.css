@@ -1,20 +1,42 @@
+/* ══ SKILL CARD — scoped under .pf ══ */
 
 .pf .pf-skill-card {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.38rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
   background: var(--pf-bg3);
   border: 1px solid var(--pf-border);
-  border-radius: 8px;
-  color: var(--pf-text-soft);
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  border-radius: 10px;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
   cursor: default;
-  display: inline-block;
 }
 .pf .pf-skill-card:hover {
   border-color: var(--pf-border-hi);
-  color: var(--pf-violet-lt);
   background: var(--pf-violet-dim);
+  transform: translateY(-2px);
+}
+.pf .pf-skill-card__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+.pf .pf-skill-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.pf .pf-skill-card__name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--pf-text);
+  line-height: 1;
+}
+.pf .pf-skill-card__level {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pf-violet-lt);
+  line-height: 1;
 }

@@ -27,9 +27,9 @@
 
 /* Logo */
 .pf .pf-nav__logo {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
   background: linear-gradient(135deg, var(--pf-violet-lt), var(--pf-gold));
   -webkit-background-clip: text;

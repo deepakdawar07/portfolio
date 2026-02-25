@@ -15,10 +15,11 @@ function useReveal() {
 }
 
 const CONTACTS = [
-  { icon: "✉️", label: "Email",    value: "deepak@example.com",         href: "mailto:deepak@example.com" },
+  { icon: "✉️", label: "Email",    value: "dawardeepak2512@gmail.com",         href: "#" },
   { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/deepak-dawar", href: "#" },
   { icon: "🐙", label: "GitHub",   value: "github.com/deepakdawar",       href: "#" },
-  { icon: "🐦", label: "Twitter",  value: "@deepakdawar",                  href: "#" },
+  { icon: "🐦", label: "LeeetCode",  value: "@deepakdawar",                  href: "#" },
+  { icon: "🐦", label: "",  value: "@deepakdawar",                  href: "#" },
 ];
 
 export default function Contact() {

@@ -18,7 +18,7 @@ export default function Navbar({ dark, setDark }) {
       <div className="pf-nav__inner">
 
         <NavLink to="/" className="pf-nav__logo">
-          DD<span style={{ color: "var(--pf-gold)" }}>.</span>
+          DD<span style={{ color: "var(--pf-gold)" }}></span>
         </NavLink>
 
         <ul className="pf-nav__links">
@@ -45,10 +45,8 @@ export default function Navbar({ dark, setDark }) {
             <div className="pf-toggle__thumb" />
           </button>
 
-          {/* Hire Me */}
           <button className="pf-nav__hire">Hire Me</button>
 
-          {/* Hamburger */}
           <button
             className="pf-nav__hamburger"
             onClick={() => setMenuOpen(o => !o)}
@@ -61,7 +59,6 @@ export default function Navbar({ dark, setDark }) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div className={`pf-nav__mobile${menuOpen ? " open" : ""}`}>
         {LINKS.map(({ label, to }) => (
           <NavLink

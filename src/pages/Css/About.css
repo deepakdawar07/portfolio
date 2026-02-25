@@ -57,9 +57,9 @@
 }
 .pf .pf-about-page__stat:hover::before { transform: scaleX(1); }
 .pf .pf-about-page__stat-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 700;
   background: linear-gradient(135deg, var(--pf-violet-lt), var(--pf-gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -110,7 +110,7 @@
   margin-bottom: 0.4rem;
 }
 .pf .pf-about-page__tl-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
@@ -133,4 +133,27 @@
 }
 @media (max-width: 480px) {
   .pf .pf-about-page__stats { grid-template-columns: 1fr; }
+}
+
+/* Soft Skills */
+.pf .pf-about-page__soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.pf .pf-about-page__soft-skill {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 0.4rem 1rem;
+  background: var(--pf-bg2);
+  border: 1px solid var(--pf-border);
+  border-radius: 99px;
+  color: var(--pf-text-soft);
+  transition: border-color 0.2s, color 0.2s;
+}
+.pf .pf-about-page__soft-skill:hover {
+  border-color: var(--pf-border-hi);
+  color: var(--pf-violet-lt);
 }
