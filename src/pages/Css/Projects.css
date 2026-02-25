@@ -1,0 +1,19 @@
+/* ══ PROJECTS PAGE — scoped under .pf ══ */
+
+.pf .pf-projects-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+.pf .pf-projects-page__wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 960px) {
+  .pf .pf-projects-page__grid { grid-template-columns: 1fr 1fr; }
+  .pf .pf-projects-page__wide { grid-column: span 2; }
+}
+@media (max-width: 600px) {
+  .pf .pf-projects-page__grid { grid-template-columns: 1fr; }
+  .pf .pf-projects-page__wide { grid-column: span 1; }
+}

@@ -1,0 +1,20 @@
+
+.pf .pf-skill-card {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.38rem 0.85rem;
+  background: var(--pf-bg3);
+  border: 1px solid var(--pf-border);
+  border-radius: 8px;
+  color: var(--pf-text-soft);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  cursor: default;
+  display: inline-block;
+}
+.pf .pf-skill-card:hover {
+  border-color: var(--pf-border-hi);
+  color: var(--pf-violet-lt);
+  background: var(--pf-violet-dim);
+}

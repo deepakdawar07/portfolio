@@ -1,0 +1,51 @@
+/* ══ FOOTER — scoped under .pf ══ */
+
+.pf .pf-footer {
+  border-top: 1px solid var(--pf-border);
+  padding: 2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.pf .pf-footer__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pf .pf-footer__copy {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pf-text-ghost);
+}
+
+.pf .pf-footer__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.pf .pf-footer__links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pf-text-ghost);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.pf .pf-footer__links a:hover {
+  color: var(--pf-violet-lt);
+}
+
+@media (max-width: 600px) {
+  .pf .pf-footer__inner {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

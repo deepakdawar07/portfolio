@@ -1,0 +1,95 @@
+/* ══ PROJECT CARD — scoped under .pf ══ */
+
+.pf .pf-project-card {
+  background: var(--pf-bg2);
+  border: 1px solid var(--pf-border);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.pf .pf-project-card:hover {
+  border-color: var(--pf-border-hi);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px var(--pf-shadow);
+}
+.pf .pf-project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pf-violet), var(--pf-gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.pf .pf-project-card:hover::before { transform: scaleX(1); }
+
+.pf .pf-project-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+.pf .pf-project-card__icon {
+  width: 44px; height: 44px;
+  background: var(--pf-violet-dim);
+  border: 1px solid var(--pf-border-hi);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.pf .pf-project-card__num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--pf-text-ghost);
+  letter-spacing: 0.1em;
+}
+.pf .pf-project-card__title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+  color: var(--pf-text);
+}
+.pf .pf-project-card__desc {
+  font-size: 0.87rem;
+  line-height: 1.7;
+  color: var(--pf-text-soft);
+  font-weight: 300;
+  margin-bottom: 1.4rem;
+}
+.pf .pf-project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.pf .pf-project-card__tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.55rem;
+  background: var(--pf-bg3);
+  border: 1px solid var(--pf-border);
+  border-radius: 6px;
+  color: var(--pf-violet-lt);
+}
+.pf .pf-project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pf-violet-lt);
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+.pf .pf-project-card__link:hover { gap: 0.7rem; }
