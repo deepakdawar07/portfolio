@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import "./Css/Contact.css";
 
 function useReveal() {
@@ -15,11 +16,10 @@ function useReveal() {
 }
 
 const CONTACTS = [
-  { icon: "✉️", label: "Email",    value: "dawardeepak2512@gmail.com",         href: "#" },
-  { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/deepak-dawar", href: "#" },
-  { icon: "🐙", label: "GitHub",   value: "github.com/deepakdawar",       href: "#" },
-  { icon: "🐦", label: "LeeetCode",  value: "@deepakdawar",                  href: "#" },
-  { icon: "🐦", label: "",  value: "@deepakdawar",                  href: "#" },
+  { icon: "✉️", label: "Email",    value: "dawardeepak2512@gmail.com",         href: "mailto:dawardeepak2512@gmail.com" },
+  { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/deepak-dawar", href: "https://linkedin.com/in/deepak-dawar" },
+  { icon: "🐙", label: "GitHub",   value: "github.com/deepakdawar",       href: "https://github.com/deepakdawar" },
+  { icon: "🐦", label: "LeetCode",  value: "@deepakdawar",                  href: "https://leetcode.com/deepakdawar/" },
 ];
 
 export default function Contact() {
@@ -28,11 +28,29 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
+
   const handleSubmit = e => {
     e.preventDefault();
-    // TODO: wire up EmailJS / Formspree / backend
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
+
+    emailjs.send(
+      "service_ziynf3n",      // replace with your EmailJS Service ID
+      "template_a7ldm0f",     // replace with your EmailJS Template ID
+      {
+        from_name: form.name,
+        from_email: form.email,
+        message: form.message,
+      },
+      "qoHzO8aeSloPQyxIw"       // replace with your EmailJS Public Key
+    ).then(
+      () => {
+        setSent(true);
+        setForm({ name: "", email: "", message: "" });
+      },
+      (err) => {
+        console.error("FAILED...", err);
+        alert("Oops! Something went wrong. Try again later.");
+      }
+    );
   };
 
   return (
@@ -53,7 +71,7 @@ export default function Contact() {
           {/* Contact Links */}
           <div className="pf-contact-page__links pf-rv" style={{ transitionDelay: "80ms" }}>
             {CONTACTS.map(c => (
-              <a key={c.label} href={c.href} className="pf-contact-page__link">
+              <a key={c.label} href={c.href} className="pf-contact-page__link" target="_blank" rel="noreferrer">
                 <div className="pf-contact-page__link-icon">{c.icon}</div>
                 <div>
                   <div className="pf-contact-page__link-lbl">{c.label}</div>

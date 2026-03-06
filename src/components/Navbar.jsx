@@ -45,7 +45,9 @@ export default function Navbar({ dark, setDark }) {
             <div className="pf-toggle__thumb" />
           </button>
 
-          <button className="pf-nav__hire">Hire Me</button>
+          <button className="pf-nav__hire"
+            onClick={() => window.open("https://wa.me/917974304882?text=Hello%20Deepak,%20I%20want%20to%20hire%20you", "_blank")}
+          >Hire Me</button>
 
           <button
             className="pf-nav__hamburger"

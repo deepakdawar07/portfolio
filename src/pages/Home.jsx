@@ -31,7 +31,7 @@ export default function Home() {
   const skills = [
     "Java","DSA","Spring","MicroService","SpringBoot","SpringSecurity","RestAPI", "MVC","Hibernate","JavaScript", "React", "Bootstrap",
     "SQL","PLSQL", "Git", "HTML & CSS","c/c++",
-    "python"
+    "python Core and Advance"
   ];
 
   return (
