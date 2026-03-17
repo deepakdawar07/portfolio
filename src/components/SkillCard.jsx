@@ -1,4 +1,4 @@
-import "./Css/SkillCard.css";
+import "./Css/Skillcard.css";
 
 export default function SkillCard({ name, icon, level }) {
   return (
