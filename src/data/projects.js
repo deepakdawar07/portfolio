@@ -43,6 +43,15 @@ const projects = [
   tags: ["React+vite","Spring Boot","Spring Security","JWT","REST API","Postgres","Cloudinary","AI Integration"],
   link: "https://resumeoverview.netlify.app/",
   wide: true,
+},
+{
+  icon: "fas fa-gamepad",
+  num: "06",
+  title: "Number Guessing Game",
+  desc: "Interactive number guessing game built using JavaScript with dynamic DOM manipulation. Features include random number generation, user input handling, and score tracking.",
+  tags: ["JavaScript", "HTML", "CSS", "DOM"],
+  link: "https://singular-rugelach-acbd08.netlify.app/",
+  wide: false,
 }
 ];
 

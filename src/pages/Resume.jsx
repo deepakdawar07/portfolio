@@ -11,14 +11,14 @@ export default function Resume() {
           <p className="pf-section-sub">
             Download my resume or view it directly below.
           </p>
-          <a href="RealResume1.pdf" download className="pf-btn-primary">
+          <a href="RealUpdateResume.pdf" download className="pf-btn-primary">
             ↓ Download Resume
           </a>
         </div>
 
         <div className="pf-resume-page__viewer">
           <iframe
-            src="RealResume1.pdf"
+            src="RealUpdateResume.pdf"
             title="Resume"
             className="pf-resume-page__iframe"
           />
