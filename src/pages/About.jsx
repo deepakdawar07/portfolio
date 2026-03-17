@@ -52,8 +52,6 @@ const EXPERIENCE = [
 
 export default function About() {
   useReveal();
-
-  // Full Technical Skills
   const skills = [
     "Java","React" ,"javaScript","JSP / Servlets", "Spring Boot", "Spring MVC", "Spring Security",
     "Hibernate", "Microservices", "REST APIs", "SQL / PostgreSQL", "Git",
@@ -123,7 +121,7 @@ export default function About() {
 
         {/* Soft Skills */}
         <br />
-        <div style={{ marginTop: "2.5rem" }} className="pf-rv" style={{ transitionDelay: "120ms" }}>
+        <div className="pf-rv" style={{ marginTop: "2.5rem" , transitionDelay: "120ms" }}>
           <div className="pf-section-tag">Soft Skills</div>
           <div className="pf-about-page__soft-skills">
             {softSkills.map(s => (
