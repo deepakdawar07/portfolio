@@ -39,9 +39,13 @@ export default function Navbar({ dark, setDark }) {
             className={`pf-toggle${dark ? " pf-toggle--on" : ""}`}
             onClick={() => setDark(d => !d)}
             aria-label="Toggle theme"
-          >
-            <span className="pf-toggle__icon pf-toggle__icon--moon">🌙</span>
-            <span className="pf-toggle__icon pf-toggle__icon--sun">☀️</span>
+          ><span className="pf-toggle__icon pf-toggle__icon--moon">
+                <i className="fas fa-moon"></i>
+              </span>
+
+              <span className="pf-toggle__icon pf-toggle__icon--sun">
+                <i className="fas fa-sun"></i>
+              </span>
             <div className="pf-toggle__thumb" />
           </button>
 

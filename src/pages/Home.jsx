@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "./Css/Home.css";
 
 const STATS = [
-  { n: "3+",  l: "Years Coding" },
-  { n: "15+", l: "Projects Built" },
+  { n: "1",  l: "year Coding" },
+  { n: "7+", l: "Projects Built" },
   { n: "8+",  l: "Technologies" },
   { n: "100%",l: "Dedication" },
 ];

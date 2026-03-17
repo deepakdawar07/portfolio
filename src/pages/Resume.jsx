@@ -11,11 +11,7 @@ export default function Resume() {
           <p className="pf-section-sub">
             Download my resume or view it directly below.
           </p>
-          <a
-            href="/assets/resume.pdf"
-            download
-            className="pf-btn-primary"
-          >
+          <a href="src/assets/RealResume1.pdf" download className="pf-btn-primary">
             ↓ Download Resume
           </a>
         </div>
@@ -26,13 +22,13 @@ export default function Resume() {
             <span>📄</span>
             <p>Place your <code>resume.pdf</code> inside <code>public/assets/</code></p>
           </div>
-          {/* Uncomment when resume.pdf is added:
+          {/* Uncomment when resume.pdf is added: */}
           <iframe
-            src="/assets/resume.pdf"
+            src="src/assets/RealResume1.pdf"
             title="Resume"
             className="pf-resume-page__iframe"
           />
-          */}
+         
         </div>
 
       </div>

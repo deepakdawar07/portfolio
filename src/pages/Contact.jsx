@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "./Css/Contact.css";
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 function useReveal() {
   useEffect(() => {
     const els = document.querySelectorAll(".pf-rv");
@@ -16,10 +16,10 @@ function useReveal() {
 }
 
 const CONTACTS = [
-  { icon: "✉️", label: "Email",    value: "dawardeepak2512@gmail.com",         href: "mailto:dawardeepak2512@gmail.com" },
-  { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/deepak-dawar", href: "https://linkedin.com/in/deepak-dawar" },
-  { icon: "🐙", label: "GitHub",   value: "github.com/deepakdawar",       href: "https://github.com/deepakdawar" },
-  { icon: "🐦", label: "LeetCode",  value: "@deepakdawar",                  href: "https://leetcode.com/deepakdawar/" },
+  { icon: "fas fa-envelope", label: "Email", value: "dawardeepak2512@gmail.com" },
+  { icon: "fab fa-linkedin", label: "LinkedIn", value: "linkedin.com/in/deepak-dawar", href: "https://www.linkedin.com/in/deepak-dawar/" },
+  { icon: "fab fa-github", label: "GitHub", value: "github.com/deepakdawar", href: "https://github.com/deepakdawar07" },
+  { icon: "fas fa-code", label: "LeetCode", value: "LeetCode/deepakdawar", href: "https://leetcode.com/u/dawardeepak2512/" },
 ];
 
 export default function Contact() {
@@ -33,14 +33,14 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs.send(
-      "service_ziynf3n",      // replace with your EmailJS Service ID
-      "template_a7ldm0f",     // replace with your EmailJS Template ID
+      "service_ziynf3n",
+      "template_a7ldm0f",
       {
         from_name: form.name,
         from_email: form.email,
         message: form.message,
       },
-      "qoHzO8aeSloPQyxIw"       // replace with your EmailJS Public Key
+      "qoHzO8aeSloPQyxIw"
     ).then(
       () => {
         setSent(true);
@@ -52,11 +52,9 @@ export default function Contact() {
       }
     );
   };
-
   return (
     <section className="pf-section pf-contact-page">
       <div className="pf-container">
-
         <div className="pf-rv">
           <div className="pf-section-tag">Get In Touch</div>
           <h1 className="pf-section-title">Let's <em>Work Together</em></h1>
@@ -72,7 +70,7 @@ export default function Contact() {
           <div className="pf-contact-page__links pf-rv" style={{ transitionDelay: "80ms" }}>
             {CONTACTS.map(c => (
               <a key={c.label} href={c.href} className="pf-contact-page__link" target="_blank" rel="noreferrer">
-                <div className="pf-contact-page__link-icon">{c.icon}</div>
+                <div className="pf-contact-page__link-icon"><i className={c.icon}></i></div>
                 <div>
                   <div className="pf-contact-page__link-lbl">{c.label}</div>
                   <div className="pf-contact-page__link-val">{c.value}</div>

@@ -4,7 +4,7 @@ export default function ProjectCard({ icon, num, title, desc, tags, link }) {
   return (
     <div className="pf-project-card pf-rv">
       <div className="pf-project-card__top">
-        <div className="pf-project-card__icon">{icon}</div>
+        <div className="pf-project-card__icon"><i className={icon}></i></div>
         <div className="pf-project-card__num">{num}</div>
       </div>
       <div className="pf-project-card__title">{title}</div>

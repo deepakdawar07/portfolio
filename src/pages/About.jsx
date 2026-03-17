@@ -17,13 +17,11 @@ function useReveal() {
     return () => obs.disconnect();
   }, []);
 }
-
-// Full Timeline / Experience including projects
 const EXPERIENCE = [
   { 
-    date: "2025 — Present", 
+    date: "2026 — Present", 
     title: "Fullstack Developer Intern", 
-    org: "TechStart Pvt. Ltd.", 
+    org: "Personal Project", 
     desc: "Built enterprise web applications using JSP, Servlets, Spring Boot, Spring MVC, Spring Security, Hibernate, and Microservices. Designed REST APIs and optimized backend performance." 
   },
   { 
@@ -45,9 +43,9 @@ const EXPERIENCE = [
     desc: "Delivered 15+ projects including dashboards, portfolios, and e-commerce sites using JSP/Servlets, Spring Boot, and relational databases." 
   },
   { 
-    date: "2023 — Present", 
+    date: "2024 — Present", 
     title: "BSc Computer Science",     
-    org: "University of Technology", 
+    org: "Holker new Science College Indore", 
     desc: "Core modules: Data Structures, Algorithms, Web Technologies, Databases, Software Engineering." 
   },
 ];
@@ -63,7 +61,7 @@ export default function About() {
     "DSA", "Backend Development", "LeetCode 500+ Qs"
   ].map(skill => ({
     name: skill,
-    icon: "💻",
+    icon: "fas fa-code",
     level: "Advanced"
   }));
 
@@ -99,10 +97,10 @@ export default function About() {
           </div>
           <div className="pf-about-page__stats pf-rv" style={{ transitionDelay: "140ms" }}>
             {[
-              { n: "3+",  l: "Years Coding" },
-              { n: "15+", l: "Projects Built" },
+              { n: "1+",  l: "Years Coding" },
+              { n: "7+", l: "Projects Built" },
               { n: "12+", l: "Technologies" },
-              { n: "500+",l: "LeetCode Qs" },
+              { n: "490+",l: "LeetCode Qs" },
             ].map((s, i) => (
               <div key={i} className="pf-about-page__stat">
                 <div className="pf-about-page__stat-num">{s.n}</div>
