@@ -18,10 +18,10 @@ export default function Resume() {
 
         {/* PDF Viewer */}
         <div className="pf-resume-page__viewer">
-          <div className="pf-resume-page__placeholder">
+          {/* <div className="pf-resume-page__placeholder">
             <span>📄</span>
             <p>Place your <code>resume.pdf</code> inside <code>public/assets/</code></p>
-          </div>
+          </div> */}
           {/* Uncomment when resume.pdf is added: */}
           <iframe
             src="src/assets/RealResume1.pdf"
